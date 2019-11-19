@@ -1,0 +1,3 @@
+backend:
+  Mysql: mysql://root:123qwe@db/yancy
+read_schema: 1

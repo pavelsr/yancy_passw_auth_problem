@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  app:
+    build: .
+    volumes:
+    - ${PWD}:/app
+    ports:
+    - "3010:3000"
+    command: 'morbo -w app.yml app.pl'
+    depends_on:
+      - db
+
+  db:
+    image: mariadb
+    environment:
+    - MYSQL_ROOT_PASSWORD=123qwe
+    - MYSQL_DATABASE=yancy
+    expose:
+    - "3306"
+    volumes:
+    - ${PWD}/sql:/docker-entrypoint-initdb.d
