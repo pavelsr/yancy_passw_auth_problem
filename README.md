@@ -12,7 +12,7 @@ wait ~1 min, until `[Note] mysqld: ready for connections` string in log
 
 4. input `admin-admin` as login-pass
 
-5. got `Login failed: User or password incorrect! ` error despite that default user `admin` is created
+5. got `Login failed: User or password incorrect! ` error despite that default user `admin` [is created](https://github.com/pavelsr/yancy_passw_auth_problem/blob/master/sql/01_users.sql#L10)
 
 you can check that user was created by 
 
